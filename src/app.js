@@ -71,20 +71,19 @@ function repartirCartas(numeroIngresado) {
 }
 
 function ordenarCartas(cartas) {
-  for (let index = 0; index < cartas.length - 1; index++) {
-    let min = index;
-    for (let j = min + 1; j < cartas.length; j++) {
-      if (cartas[j].numero < cartas[min].numero) {
-        min = j;
+  let wall = cartas.length - 1;
+  while (wall > 0) {
+    let index = 0;
+    while (index < wall) {
+      if (cartas[index].numero > cartas[index + 1].numero) {
+        let aux = cartas[index];
+        cartas[index] = cartas[index + 1];
+        cartas[index + 1] = aux;
+        cartasOrdenadas.push([...cartas]);
       }
+      index++;
     }
-    if (min !== index) {
-      const temp = cartas[index];
-      cartas[index] = cartas[min];
-      cartas[min] = temp;
-      cartasOrdenadas.push(cartas);
-    }
-    cartasOrdenadas.push(cartas);
+    wall--;
   }
   return cartas;
 }
