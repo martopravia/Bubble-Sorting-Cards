@@ -1,1 +1,21 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+.carta {
+  width: 70px;
+  height: 100px;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 8px;
+}
+
+.red {
+  color: red;
+}
+
+.black {
+  color: black;
+}

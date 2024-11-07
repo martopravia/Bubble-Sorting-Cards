@@ -12,18 +12,46 @@
     />
     <link rel="shortcut icon" href="./4geeks.ico" />
   </head>
-  <body>
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ bysd
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
+  <body
+    class="
+  bg-success"
+  >
+    <div class="container-fluid">
+      <div class="row g-3 align-items-center">
+        <div class="col-auto">
+          <label for="cardsNumber" class="col-form-label">Original:</label>
+        </div>
+        <div class="col-1">
+          <input
+            type="number"
+            id="cardsNumber"
+            class="form-control"
+            aria-describedby="passwordHelpInline"
+          />
+        </div>
+        <div class="col-auto d-flex">
+          <button type="button" class="btn btn-light d-inline mx-1 dibujar">
+            Draw
+          </button>
+
+          <button type="button" class="btn btn-light d-inline mx-1 ordenar">
+            Sort
+          </button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-auto cartasMano d-flex" id="cartasMano">
+          <div class="carta mt-3 p-1">
+            <div class="paloArriba text-start m-0">s</div>
+            <div class="numeroLetra text-center">4</div>
+            <div class="paloAbajo text-end m-0">s</div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 contenedorCartas"></div>
       </div>
     </div>
+    <script src="app.js"></script>
   </body>
 </html>
